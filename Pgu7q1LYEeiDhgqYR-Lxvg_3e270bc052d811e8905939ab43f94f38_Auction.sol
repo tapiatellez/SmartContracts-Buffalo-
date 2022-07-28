@@ -103,11 +103,13 @@ contract Auction {
         }
     }
     
-    // Part 2 Task 1. Create a modifier named "onlyOwner" to ensure that only owner is allowed to reveal winners
-    //Hint : Use require to validate if "msg.sender" is equal to the "beneficiary".
+    // Part 2 Task 1. Create a modifier named "onlyOwner" to ensure 
+    // that only owner is allowed to reveal winners
+    // Hint : Use require to validate if "msg.sender" is equal to the 
+    // "beneficiary".
     modifier onlyOwner {
         // ** Start code here. 2 lines approximately. **
-        
+        require (beneficiary == msg.sender);
         _;
         //** End code here. **
     }
