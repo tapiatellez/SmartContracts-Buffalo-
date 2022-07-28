@@ -82,7 +82,7 @@ contract Auction {
         // ** Start code here. 2 lines approximately. **/
         if (tokenDetails[msg.sender].remainingTokens < _count ||
             tokenDetails[msg.sender].remainingTokens == 0 ||
-            _itemId > 2) return;
+            _itemId > 2) revert();
         //** End code here. **
         
         /*Part 1 Task 5. Decrement the remainingTokens by the number
